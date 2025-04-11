@@ -8,6 +8,11 @@
 - Error handling
 - Input/output operations
 
+📖 Resources:
+- [MDN JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
+- [JavaScript.info](https://javascript.info/)
+
+
 ## Data Structures
 - Arrays, Lists
 - Stacks, Queues
