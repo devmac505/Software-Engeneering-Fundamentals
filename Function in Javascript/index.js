@@ -3,11 +3,114 @@
 a function is a block of code that is designed to perform a particular task when something invokes it.
 */ 
 
-//Basic example of function
+//Basic syntax
+function functionName(parameters) {
+    // code to execute
+    return result;
+}
+
+
+//Basic example of function but it use template literals  ${name}
 function greet(name) {
     return `Hello, ${name}`
 }
 console.log(greet("Mariane"));
+
+//Create another example on my own 
+
+function sayBye (name) {
+    return `BYE BYE, ${name}`
+}
+console.log(sayBye("Mark"));
+ 
+//Now lets try to using concatenation by using + sign
+//(name) is the parameter we use.  Its like saying. Hey this function needs a value to I called name while inside the function 
+// then we call an argument to add a value 
+function saySorry(name){
+    return "Sorry," + name;
+}
+console.log(saySorry(" Mika"))
+
+
+//[EXPERIMENT]
+//Now lets try comparison function but in our own and try if we can build trough our own logic.
+// function isEven(num) 
+//     if(num / 2 ){
+//     return `This is even number ${num}`
+// } else {                                         //I THINK WE HAVE ERROR HERE BUT I TRY TO CREATE USING OUR PREVIOUS TOPIC LOL:)
+//     return `This is not an even number ${num}`  //SO KNOW LET FIND OUT WHAT IS MISSING IN OUR CODE OR THE ERROR 
+// }
+// console.log(isEven(8));
+
+//[DEBUG TIME !!!]
+function isEven1 (num){
+    if(num % 2 === 0){ //here we got the problem because any number  dived by 2 even have a remainder always return truthy that is make sense right.
+        return `This is an Even Number ${num}`
+    }else {
+        return `This is Odd Number ${num}`
+    }
+}
+console.log(isEven(8));
+
+// Now it is functional but the output look a little bit weird, output sample 'This is an Even Number 8' what if we make the number first then the string that look like this 8 is an even number. lets try it
+
+function isEven2(num) {
+    if(num % 2 ===0) {
+        return `${num} is an even number` 
+    }else {
+        return `${num} is an odd number`
+    }
+}
+console.log(isEven(3));
+
+
+
+
+
+
+
+
+
+// ✅ Basic & Useful Examples:
+
+// Function Name	                     What It Does
+
+// greet(name)	                         Greets the person by name
+// add(a, b)	                         Adds two numbers
+// multiply(a, b)                        Multiplies two numbers
+// isEven(num)	                         Checks if a number is even
+// getAgeInMonths(ageInYears)	         Converts age in years to months
+// sayBye(name)	                         Says goodbye to a person
+
+
+//Function Declaration 
+function add(a, b) {
+    return a + b;
+}
+console.log(add(2, 3));
+
+
+//Function Expression 
+const subtract = function(a, b) {
+    return a - b;
+};
+console.log(subtract(5, 2));
+
+
+//Arrow Function 
+const multiply = (a, b) => a * b;
+console.log(multiply(2, 3));
+
+
+
+
+//Anonymous Function 
+
+setTimeout(function() {
+    console.log("This runs after 2 seconds");
+}, 2000);
+
+
 
 //Recursion in Javascript
 //Recursion is a technique in which a function calls itself.
